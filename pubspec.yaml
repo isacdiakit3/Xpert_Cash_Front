@@ -1,0 +1,34 @@
+name: xpert_cash_front
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^1.1.4
+  http: ^1.1.0
+  image_picker: ^1.0.4
+  http_parser: ^4.0.2
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  multiple_images_picker: ^1.0.1
+  provider: ^6.1.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets :
+      - assets/images/
+      - assets/background/
