@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:xpert_cash_front/pages/Manager/credit.dart';
 import 'package:xpert_cash_front/pages/Manager/produit.dart';
+import 'package:xpert_cash_front/pages/Manager/tranfert_fond.dart';
 import 'package:xpert_cash_front/pages/constante.dart';
 
 import '../Vendeur/client_page.dart';
 import '../Vendeur/page_vente.dart';
 import 'depense.dart';
+import 'historique.dart';
 
 
 class GestionTresorerie extends StatefulWidget {
@@ -134,81 +137,102 @@ class _GestionTresorerieState extends State<GestionTresorerie> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
 
-                Container(
-
-                  margin: EdgeInsets.only(top: 10 , left: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: gris,
-                  ),
-                  width: 100,
-                  height: 100,
-                  child: Column(
-                    children: [
-                      Image.asset("assets/images/Transfer.png"),
-                      Text(
-                          "Transfert de fond",
-                        softWrap: true,
-                        maxLines: 2,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 13
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  margin: EdgeInsets.only(top: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: gris,
-                  ),
-                  child: Column(
-                    children: [
-                      Image.asset("assets/images/Money.png"),
-                      Text(
-                        "Paiement de crédit",
-                        softWrap: true,
-                        maxLines: 2,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 13
-                        ),
-                      )
-                    ],
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => TransfertFond(),));                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 10 , left: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: gris,
+                    ),
+                    width: 100,
+                    height: 100,
+                    child: Column(
+                      children: [
+                        Image.asset("assets/images/Transfer.png"),
+                        Text(
+                            "Transfert de fond",
+                          softWrap: true,
+                          maxLines: 2,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 13
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  margin: EdgeInsets.only(top: 10 , right: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: gris,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Credit(),));
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    margin: EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: gris,
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset("assets/images/Money.png"),
+                        Text(
+                          "Paiement de crédit",
+                          softWrap: true,
+                          maxLines: 2,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 13
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                  child: Column(
-                    children: [
-                      Image.asset("assets/images/File.png"),
-                      Text(
-                        "Historique",
-                        textAlign: TextAlign.center,
-                        maxLines: 2,
-                        style: TextStyle(
-                          fontSize: 13
-                        ),
-                      )
-                    ],
+                ),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Historique(),));
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    margin: EdgeInsets.only(top: 10 , right: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: gris,
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset("assets/images/File.png"),
+                        Text(
+                          "Historique",
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          style: TextStyle(
+                            fontSize: 13
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
-          )
+          ),
+          Expanded(
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                margin: EdgeInsets.only(top: 10),
+                child: Image.asset("assets/images/wari.png",fit: BoxFit.cover,),
+              )
+          ),
         ],
       ),
     );

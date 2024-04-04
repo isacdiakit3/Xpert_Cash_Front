@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:xpert_cash_front/pages/Vendeur/page_paiement.dart';
-import 'package:xpert_cash_front/pages/Vendeur/panier.dart';
-
-import 'ajout_client.dart';
+import 'package:xpert_cash_front/pages/Vendeur/page_vente.dart';
 
 
 
 
 class Vente extends StatefulWidget {
-  const Vente({super.key});
+// Déclarez un champ pour stocker la fonction d'incrémentation du compteur
+  final void Function() incrementCounter;
+  const  Vente(
+      {Key? key, required this.incrementCounter}
+      )
+      : super(
+      key: key
+  );
+
+
+
 
   @override
   State<Vente> createState() => _VenteState();
 }
 
 class _VenteState extends State<Vente> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,14 +40,15 @@ class _VenteState extends State<Vente> {
               color: Colors.orangeAccent,
             ),
             child: Text(
-              "8552445236",
+              "50 000",
               style: TextStyle(
-                  color: Colors.white
+                  color: Colors.white,
+                fontSize: 18
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.all(10),
+            margin: EdgeInsets.only(right: 20 , left: 20 , top: 10 , bottom: 10),
             padding: EdgeInsets.all(5.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
@@ -54,7 +65,283 @@ class _VenteState extends State<Vente> {
               },
             ),
           ),
-          Expanded(child: Placeholder()),
+          Expanded(
+              child: Container(
+                width: double.infinity,
+                 margin: EdgeInsets.only(right: 20, left: 20),
+                 child: ListView(
+                   children: [
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                       
+                       children: [
+                         GestureDetector(
+                           onTap: (){
+                              widget.incrementCounter(); // Appelez la fonction du callback
+                           },
+                           child: Container(
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(10),
+                               color: Color(0xFF8D8A8A),
+                             ),
+                             width: 100,
+                             height: 100,
+                             child: Column(
+                               children: [
+                                 Text(
+                                   "10 000",
+                                   style: TextStyle(
+                                       color: Colors.white,
+                                     fontSize: 12
+                                   ),
+                                 ),
+                                 Container(
+                                   width: double.infinity,
+                                     height: 55,
+                                     child: Image.asset("assets/images/livre.png",fit: BoxFit.cover,)),
+                                 Text(
+                                     "Livre",
+                                     style: TextStyle(
+                                         fontSize: 12,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                                 Text(
+                                     "Stock : 200",
+                                     style: TextStyle(
+                                         fontSize: 8,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                               ],
+                             ),
+                           ),
+                         ),
+                         GestureDetector(
+                           onTap: (){
+                             widget.incrementCounter(); // Appelez la fonction du callback
+                           },
+                           child: Container(
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(10),
+                               color: Color(0xFF8D8A8A),
+                             ),
+                             width: 100,
+                             height: 100,
+                             child: Column(
+                               children: [
+                                 Text(
+                                   "10 000",
+                                   style: TextStyle(
+                                       color: Colors.white,
+                                       fontSize: 12
+                                   ),
+                                 ),
+                                 Container(
+                                     width: double.infinity,
+                                     height: 55,
+                                     child: Image.asset("assets/images/stylo.png",fit: BoxFit.cover,)),
+                                 Text(
+                                     "Stylo",
+                                     style: TextStyle(
+                                       fontSize: 12,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                                 Text(
+                                     "Stock : 200",
+                                     style: TextStyle(
+                                       fontSize: 8,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                               ],
+                             ),
+                           ),
+                         ),
+                         GestureDetector(
+                           onTap: (){
+                             widget.incrementCounter(); // Appelez la fonction du callback
+                           },
+                           child: Container(
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(10),
+                               color: Color(0xFF8D8A8A),
+                             ),
+                             width: 100,
+                             height: 100,
+                             child: Column(
+                               children: [
+                                 Text(
+                                   "10 000",
+                                   style: TextStyle(
+                                       color: Colors.white,
+                                       fontSize: 12
+                                   ),
+                                 ),
+                                 Container(
+                                     width: double.infinity,
+                                     height: 55,
+                                     child: Image.asset("assets/images/imprimante.png",fit: BoxFit.cover,)),
+                                 Text(
+                                     "Imprimante",
+                                     style: TextStyle(
+                                       fontSize: 12,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                                 Text(
+                                     "Stock : 200",
+                                     style: TextStyle(
+                                       fontSize: 8,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                               ],
+                             ),
+                           ),
+                         ),
+                       ],
+                     ),
+                     SizedBox(
+                       height: 10,
+                     ),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                       children: [
+                         GestureDetector(
+                           onTap: (){
+                             widget.incrementCounter(); // Appelez la fonction du callback
+                           },
+                           child: Container(
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(10),
+                               color: Color(0xFF8D8A8A),
+                             ),
+                             width: 100,
+                             height: 100,
+                             child: Column(
+                               children: [
+                                 Text(
+                                   "10 000",
+                                   style: TextStyle(
+                                       color: Colors.white,
+                                       fontSize: 12
+                                   ),
+                                 ),
+                                 Container(
+                                     width: double.infinity,
+                                     height: 55,
+                                     child: Image.asset("assets/images/usb.png",fit: BoxFit.cover,)),
+                                 Text(
+                                     "Clé USB",
+                                     style: TextStyle(
+                                       fontSize: 12,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                                 Text(
+                                     "Stock : 200",
+                                     style: TextStyle(
+                                       fontSize: 8,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                               ],
+                             ),
+                           ),
+                         ),
+                         GestureDetector(
+                           onTap: (){
+                             widget.incrementCounter(); // Appelez la fonction du callback
+                           },
+                           child: Container(
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(10),
+                               color: Color(0xFF8D8A8A),
+                             ),
+                             width: 100,
+                             height: 100,
+                             child: Column(
+                               children: [
+                                 Text(
+                                   "10 000",
+                                   style: TextStyle(
+                                       color: Colors.white,
+                                       fontSize: 12
+                                   ),
+                                 ),
+                                 Container(
+                                     width: double.infinity,
+                                     height: 55,
+                                     child: Image.asset("assets/images/mac.png",fit: BoxFit.cover,)),
+                                 Text(
+                                     "Macbook pro",
+                                     style: TextStyle(
+                                       fontSize: 12,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                                 Text(
+                                     "Stock : 200",
+                                     style: TextStyle(
+                                       fontSize: 8,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                               ],
+                             ),
+                           ),
+                         ),
+                         GestureDetector(
+                           onTap: (){
+                             widget.incrementCounter(); // Appelez la fonction du callback
+                           },
+                           child: Container(
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(10),
+                               color: Color(0xFF8D8A8A),
+                             ),
+                             width: 100,
+                             height: 100,
+                             child: Column(
+                               children: [
+                                 Text(
+                                   "10 000",
+                                   style: TextStyle(
+                                       color: Colors.white,
+                                       fontSize: 12
+                                   ),
+                                 ),
+                                 Container(
+                                     width: double.infinity,
+                                     height: 55,
+                                     child: Image.asset("assets/images/tissu.png",fit: BoxFit.cover,)),
+                                 Text(
+                                     "Tissus",
+                                     style: TextStyle(
+                                       fontSize: 12,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                                 Text(
+                                     "Stock : 200",
+                                     style: TextStyle(
+                                       fontSize: 8,
+                                       color: Colors.white,
+                                     )
+                                 ),
+                               ],
+                             ),
+                           ),
+                         ),
+                       ],
+                     ),
+                   ],
+                 ),
+              )
+          ),
           Container(
             width: double.infinity,
             height: 50,

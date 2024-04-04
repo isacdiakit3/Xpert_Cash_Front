@@ -49,7 +49,226 @@ class _DepenseState extends State<Depense> {
               },
             ),
           ),
-          Expanded(child: Placeholder()),
+          Expanded(
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.all(10),
+                child : ListView(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF8D8A8A),
+                        borderRadius: BorderRadius.circular(10),
+
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Livre",style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),),
+                              Text("20/03/2024  12:19",style: TextStyle(
+                                color: Colors.white,
+                                  fontSize: 10
+                              ))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                children: [
+                                  Text("Quantité",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      )),
+                                  Text("200",style: TextStyle(
+                                    color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("Validateur",style: TextStyle(
+                                    color: Colors.white,
+                                  )),
+                                  Text("Hanna Traoré",style: TextStyle(
+                                    color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+
+                              Column(
+                                children: [
+                                  Text("Montant",style: TextStyle(
+                                    color: Colors.white,
+                                  )),
+                                  Text("1 000 000",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15
+                                  ))
+                                ],
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF8D8A8A),
+                        borderRadius: BorderRadius.circular(10),
+
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Imprimante",style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),),
+                              Text("20/03/2024  12:19",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10
+                              ))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                children: [
+                                  Text("Quantité",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      )),
+                                  Text("200",style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("Validateur",style: TextStyle(
+                                    color: Colors.white,
+                                  )),
+                                  Text("Hanna Traoré",style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+
+                              Column(
+                                children: [
+                                  Text("Montant",style: TextStyle(
+                                    color: Colors.white,
+                                  )),
+                                  Text("1 000 000",style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF8D8A8A),
+                        borderRadius: BorderRadius.circular(10),
+
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Transport",style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),),
+                              Text("20/03/2024  12:19",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10
+                              ))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                children: [
+                                  Text("Quantité",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      )),
+                                  Text("200",style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("Validateur",style: TextStyle(
+                                    color: Colors.white,
+                                  )),
+                                  Text("Hanna Traoré",style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+
+                              Column(
+                                children: [
+                                  Text("Montant",style: TextStyle(
+                                    color: Colors.white,
+                                  )),
+                                  Text("1 000 000",style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15
+                                  ))
+                                ],
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                )
+              )
+          ),
           Container(
             width: double.infinity,
             height: 50,

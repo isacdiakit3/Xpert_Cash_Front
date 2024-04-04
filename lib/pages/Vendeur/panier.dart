@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:xpert_cash_front/pages/Vendeur/modif_panier.dart';
+import 'package:xpert_cash_front/pages/Vendeur/page_paiement.dart';
 
 import '../constante.dart';
 import 'ajout_client.dart';
@@ -12,6 +14,20 @@ class Panier extends StatefulWidget {
 }
 
 class _PanierState extends State<Panier> {
+
+  String _prix = "50 000";
+  int _counter = 0;
+  void incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+  void reset() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +61,7 @@ class _PanierState extends State<Panier> {
                     )
                 ),
                 child: Text(
-                    "8",
+                    "$_counter",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -85,9 +101,86 @@ class _PanierState extends State<Panier> {
               color: Colors.orangeAccent,
             ),
             child: Text(
-              "8552445236",
+              "$_prix",
               style: TextStyle(
-                  color: Colors.white
+                  color: Colors.white,
+                fontSize: 18
+              ),
+            ),
+          ),
+          Expanded(
+              child: Container(
+                margin: EdgeInsets.all(10),
+                child: ListView(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Text("livre x 5"),
+                            IconButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ModifPanier(),));
+                                  },
+                                icon: Icon(Icons.edit_note))
+                          ],
+                        ),
+                        Text("30 000")
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Text("tissus x 3"),
+                            IconButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ModifPanier(),));
+                                  },
+                                icon: Icon(Icons.edit_note))
+                          ],
+                        ),
+                        Text("60 000")
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Text("iphone 15 x 2"),
+                            IconButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ModifPanier(),));
+                                },
+                                icon: Icon(Icons.edit_note))
+                          ],
+                        ),
+                        Text("300 000")
+                      ],
+                    ),
+                  ],
+                ),
+              )
+          ),
+          Container(
+            width: double.infinity,
+            height: 50,
+            margin: EdgeInsets.all(10),
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PagePaiement(),));
+              },
+              child: Text("Charger la commande",
+                style: TextStyle(fontSize: 20 , color: Colors.white),
+                textAlign: TextAlign.center,),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
           ),

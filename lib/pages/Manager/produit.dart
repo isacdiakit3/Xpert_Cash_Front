@@ -51,7 +51,283 @@ class _ProduitState extends State<Produit> {
               },
             ),
           ),
-          Expanded(child: Placeholder()),
+          Expanded(
+              child:Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(right: 20, left: 20),
+                child: ListView(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            // Appelez la fonction du callback
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFF8D8A8A),
+                            ),
+                            width: 100,
+                            height: 100,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "10 000",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),
+                                ),
+                                Container(
+                                    width: double.infinity,
+                                    height: 55,
+                                    child: Image.asset("assets/images/livre.png",fit: BoxFit.cover,)),
+                                Text(
+                                    "Livre",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                Text(
+                                    "Stock : 200",
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFF8D8A8A),
+                            ),
+                            width: 100,
+                            height: 100,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "10 000",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),
+                                ),
+                                Container(
+                                    width: double.infinity,
+                                    height: 55,
+                                    child: Image.asset("assets/images/stylo.png",fit: BoxFit.cover,)),
+                                Text(
+                                    "Stylo",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                Text(
+                                    "Stock : 200",
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+                             // Appelez la fonction du callback
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFF8D8A8A),
+                            ),
+                            width: 100,
+                            height: 100,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "10 000",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),
+                                ),
+                                Container(
+                                    width: double.infinity,
+                                    height: 55,
+                                    child: Image.asset("assets/images/imprimante.png",fit: BoxFit.cover,)),
+                                Text(
+                                    "Imprimante",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                Text(
+                                    "Stock : 200",
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            // Appelez la fonction du callback
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFF8D8A8A),
+                            ),
+                            width: 100,
+                            height: 100,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "10 000",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),
+                                ),
+                                Container(
+                                    width: double.infinity,
+                                    height: 55,
+                                    child: Image.asset("assets/images/usb.png",fit: BoxFit.cover,)),
+                                Text(
+                                    "Clé USB",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                Text(
+                                    "Stock : 200",
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+                            // Appelez la fonction du callback
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFF8D8A8A),
+                            ),
+                            width: 100,
+                            height: 100,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "10 000",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),
+                                ),
+                                Container(
+                                    width: double.infinity,
+                                    height: 55,
+                                    child: Image.asset("assets/images/mac.png",fit: BoxFit.cover,)),
+                                Text(
+                                    "Macbook pro",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                Text(
+                                    "Stock : 200",
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+                             // Appelez la fonction du callback
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFF8D8A8A),
+                            ),
+                            width: 100,
+                            height: 100,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "10 000",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),
+                                ),
+                                Container(
+                                    width: double.infinity,
+                                    height: 55,
+                                    child: Image.asset("assets/images/tissu.png",fit: BoxFit.cover,)),
+                                Text(
+                                    "Tissus",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                Text(
+                                    "Stock : 200",
+                                    style: TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
+          ),
           Container(
             width: double.infinity,
             height: 50,

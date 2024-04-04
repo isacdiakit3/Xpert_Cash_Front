@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:xpert_cash_front/pages/Vendeur/page_paiement.dart';
 import 'package:xpert_cash_front/pages/splash.dart';
 
 void main() {

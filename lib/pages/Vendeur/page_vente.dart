@@ -21,7 +21,23 @@ class PageVente extends StatefulWidget {
 
 class _PageVenteState extends State<PageVente> {
 
+  int prix = 0;
   int _currentIndex = 0;
+  int _counter = 0;
+
+  void incrementCounter() {
+    setState(() {
+      _counter++;
+      prix+5000;
+    });
+  }
+  void reset() {
+    setState(() {
+      _counter = 0;
+      prix = 0 ;
+    });
+  }
+
 
   setCurrentIndex(int index){
     setState((){
@@ -38,6 +54,9 @@ class _PageVenteState extends State<PageVente> {
         title: GestureDetector(
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => Panier(),));
+          },
+          onLongPress: (){
+            reset();// Appelez la fonction du callback
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +80,7 @@ class _PageVenteState extends State<PageVente> {
                   )
                 ),
                 child: Text(
-                    "8",
+                    "$_counter",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -93,7 +112,7 @@ class _PageVenteState extends State<PageVente> {
         drawerScrimColor: Colors.black12,
       extendBody: true,
       body: [
-        Vente(),
+        Vente(incrementCounter : incrementCounter),
         Panier()
       ][_currentIndex]
     );
@@ -275,7 +294,8 @@ Widget drawer (BuildContext context) {
                   margin: EdgeInsets.only(left: 10 , right: 40),
                   child: Image.asset("assets/images/Money_management.png"),
                 ),
-                Text("Gestion de trésorérie" , style: TextStyle(fontSize: 20),)
+                Text("Gestion de trésorérie" , style: TextStyle(fontSize: 20),
+                )
               ],
             ),
           ),

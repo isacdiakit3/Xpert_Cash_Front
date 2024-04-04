@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:xpert_cash_front/pages/constante.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
+import '../constante.dart';
 
 
-class PagePaiement extends StatefulWidget {
-  const PagePaiement({super.key});
+class PaiementCredit extends StatefulWidget {
+  const PaiementCredit({super.key});
 
   @override
-  State<PagePaiement> createState() => _PagePaiementState();
+  State<PaiementCredit> createState() => _PaiementCreditState();
 }
 
-class _PagePaiementState extends State<PagePaiement> {
-
+class _PaiementCreditState extends State<PaiementCredit> {
 
   Color _color = Colors.black;
 
@@ -20,30 +19,23 @@ class _PagePaiementState extends State<PagePaiement> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        foregroundColor: Colors.white,
-        backgroundColor: myColor,
-        title: Text(
-          "Mode de paiement",
-          style: TextStyle(
-            color: Colors.white
-          ),
-        ),
+      appBar: AppBar( foregroundColor: Colors.white,
         centerTitle: true,
+        title: Text(
+          "Chaka Diakité",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: myColor,
+
       ),
       body: Center(
-        widthFactor: 1,
-        heightFactor: 1,
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: double.infinity,
-              alignment: Alignment.center,
-              margin: EdgeInsets.all(20),
-              child:
-              viewer()
+                width: screenWidth*0.82,
+                alignment: Alignment.center,
+                child: viewer()
             ),
             Container(
               width: screenWidth*0.82,
@@ -53,16 +45,16 @@ class _PagePaiementState extends State<PagePaiement> {
                 child: Text(
                   "Valider la commande",
                   style: TextStyle(
-                    color: Colors.white
+                      color: Colors.white
                   ),
                 ),
                 onPressed: (){},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: myColor,
+                    backgroundColor: myColor,
 
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)
-                  )
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)
+                    )
 
                 ),
               ),
@@ -74,7 +66,6 @@ class _PagePaiementState extends State<PagePaiement> {
       ),
     );
   }
-
   Widget viewer(){
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
@@ -84,7 +75,7 @@ class _PagePaiementState extends State<PagePaiement> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
                 onTap: (){
@@ -93,8 +84,8 @@ class _PagePaiementState extends State<PagePaiement> {
                   });
                 },
                 child: Container(
-                  width: screenWidth*0.4,
-                  height: 80,
+                  width: screenWidth*0.82,
+                  height: 90,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)
                       ),
@@ -112,7 +103,6 @@ class _PagePaiementState extends State<PagePaiement> {
                         contentPadding: EdgeInsets.only(top: 10),
                         title: Text(
                           "Cash",
-
                           textAlign: TextAlign.center,
                           selectionColor: Colors.orange,
                           style: TextStyle(
@@ -124,9 +114,15 @@ class _PagePaiementState extends State<PagePaiement> {
                   ),
                 ),
               ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
               Container(
                 width: screenWidth*0.4,
-                height: 80,
+                height: 90,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     shape: BoxShape.rectangle,
@@ -151,15 +147,10 @@ class _PagePaiementState extends State<PagePaiement> {
                   ],
                 ),
               ),
-            ],
-          ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+
               Container(
                 width: screenWidth*0.4,
-                height: 80,
+                height: 90,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     shape: BoxShape.rectangle,
@@ -184,40 +175,11 @@ class _PagePaiementState extends State<PagePaiement> {
                   ],
                 ),
               ),
-              Container(
-                width: screenWidth*0.4,
-                height: 80,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    shape: BoxShape.rectangle,
-                    border:Border.all(
-                        color: Colors.black,
-                        width: 1.0)
-                ),
-                child: ListView(
-                  children: <Widget>[
-                    ListTile(
-                      hoverColor: Colors.orange,
-                      selectedColor: Colors.orangeAccent,
-                      contentPadding: EdgeInsets.only(top: 10),
-                      title: Text(
-                        "Credit",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
             ],
           ),
+          SizedBox(height: 10)
         ],
       ),
     );
   }
 }
-
-
-

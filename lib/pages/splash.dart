@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:xpert_cash_front/pages/choix.dart';
-import 'package:xpert_cash_front/pages/constante.dart';
 import 'package:flutter/material.dart';
+
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -25,8 +25,6 @@ class _SplashState extends State<Splash> {
             ),
           ),
     );
-
-
   }
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xpert_cash_front/pages/constante.dart';
 
 
 
@@ -14,6 +15,7 @@ class _ProfilState extends State<Profil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: myColor,
         foregroundColor: Colors.white,
         centerTitle: true,
         title: Text("Profil client"),
@@ -28,16 +30,17 @@ class _ProfilState extends State<Profil> {
                   height: 200,
                   margin: EdgeInsets.all(15),
                   child: CircleAvatar(
-                    child: Image.asset("assets/images/client.png",
+                    child: Image.asset("assets/images/chaka1.png",
                         fit: BoxFit.contain,
                         width: double.infinity),
-
                   ),
                 ),
+                Text("Chaka Diakité", style: TextStyle(
+                  fontSize: 30
+                ),),
                Container(
                  margin: EdgeInsets.all(30),
                  child: Row(
-
                    children: [
                      Icon(
                        Icons.phone_in_talk_rounded,  // Utilisez l'icône de téléphone à partir de FlutterIcons
@@ -45,10 +48,11 @@ class _ProfilState extends State<Profil> {
                      ),
                      Container(
                       margin : EdgeInsets.only(left: 20),
-                       child: Text("+223 85 46 42 84",
+                       child: Text("+223 75 15 55 44",
                        style: TextStyle(
                          fontSize: 20
-                       ),),
+                       ),
+                     ),
                      )
                    ],
                  ),

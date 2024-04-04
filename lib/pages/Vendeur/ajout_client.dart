@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xpert_cash_front/pages/Vendeur/profil.dart';
 import 'package:xpert_cash_front/pages/constante.dart';
 
 import 'form_client.dart';
@@ -46,7 +47,82 @@ class _AjoutClientState extends State<AjoutClient> {
               },
             ),
           ),
-          Expanded(child: Placeholder()),
+          Expanded(
+              child: Container(
+                margin: EdgeInsets.all(10),
+                child: ListView(
+                  children: [
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Profil(),));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                child: Image.asset(
+                                  "assets/images/chaka1.png",
+                                  fit: BoxFit.contain,
+                                  width: double.infinity,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                children: [
+                                  Text("Chaka Diakité"),
+                                  Text("75 15 55 44")
+                                ],
+                              )
+                            ],
+                          ),
+                          IconButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(Icons.add)
+                          )
+                        ],
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            CircleAvatar(
+                              child: Image.asset(
+                                "assets/images/vectory.png",
+                                fit: BoxFit.contain,
+                                width: double.infinity,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              children: [
+                                Text("Hanna Traoré"),
+                                Text("75 15 55 44")
+                              ],
+                            )
+                          ],
+                        ),
+                        IconButton(
+                            onPressed: (){
+                              Navigator.pop(context);
+                            },
+                            icon: Icon(Icons.add)
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              )
+          ),
           Container(
             width: double.infinity,
             height: 50,
